@@ -50,3 +50,15 @@ return nil
 end
 
 #9.
+# def remove_pet_by_name(pet_shop_hash, pet_name)
+#   find_pet_by_name(pet_shop_hash, pet_name)
+#   pet_shop_hash[:pets].remove(pet)
+# end
+def remove_pet_by_name(pet_shop_hash, pet_name)
+  for pet in pet_shop_hash[:pets]
+    if pet[:name] == pet_name
+        pet_shop_hash[:pets].delete(pet)
+    end
+  end
+  return nil
+end
