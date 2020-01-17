@@ -41,11 +41,12 @@ end
 
 #8.
 def find_pet_by_name(pet_shop_hash, pet_name)
-  found_name = []
-  for name in pet_shop_hash[:pets]
-    if name[:name] == pet_name
-      found_name.push(name)
+  for pet in pet_shop_hash[:pets]
+    if pet[:name] == pet_name
+      return pet
     end
   end
-  return found_name
+return nil
 end
+
+#9.
