@@ -50,10 +50,6 @@ return nil
 end
 
 #9.
-# def remove_pet_by_name(pet_shop_hash, pet_name)
-#   find_pet_by_name(pet_shop_hash, pet_name)
-#   pet_shop_hash[:pets].remove(pet)
-# end
 def remove_pet_by_name(pet_shop_hash, pet_name)
   for pet in pet_shop_hash[:pets]
     if pet[:name] == pet_name
@@ -62,3 +58,11 @@ def remove_pet_by_name(pet_shop_hash, pet_name)
   end
   return nil
 end
+
+#10.
+def add_pet_to_stock(pet_shop_hash, new_pet)
+  pet_shop_hash[:pets].push(new_pet)
+  return pet_shop_hash[:pets].length()
+end
+
+#11.
