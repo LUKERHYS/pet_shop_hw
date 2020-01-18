@@ -77,9 +77,21 @@ end
 
 #13
 def customer_pet_count(customers_array)
-  total_customer_pets = 0
+  total_customer_pets = []
   for customer in customers_array[:pets]
-    total_customer_pets += customer.count()
+    total_customer_pets += customer
   end
-  return total_customer_pets
+  return total_customer_pets.length()
 end
+def customer_pet_count(customers_array)
+  customers_array[:pets].count()
+end
+
+#14
+def add_pet_to_customer(customers_array, new_pet)
+  customers_array[:pets] << new_pet
+end
+
+###OPTIONAL###
+
+#15.
