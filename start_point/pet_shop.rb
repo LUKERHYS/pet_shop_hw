@@ -95,3 +95,12 @@ end
 ###OPTIONAL###
 
 #15.
+def customer_can_afford_pet(customer_from_array, new_pet)
+  if customer_from_array[:cash] >= new_pet[:price]
+    return true
+  else
+    return false
+  end
+end
+
+#16.
