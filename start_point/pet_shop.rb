@@ -110,10 +110,5 @@ def sell_pet_to_customer(pet_shop_hash, pet, customer)
     pet_shop_hash[:admin][:pets_sold] += customer_pet_count(customer)
      remove_customer_cash(customer, pet[:price])
     add_or_remove_cash(pet_shop_hash, pet[:price])
-  else
-      customer_pet_count(customer)
-      pet_shop_hash[:admin][:pets_sold]
-      customer_cash(customer)
-      total_cash(pet_shop_hash)
   end
 end
