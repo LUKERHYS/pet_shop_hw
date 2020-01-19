@@ -104,3 +104,13 @@ def customer_can_afford_pet(customer_from_array, new_pet)
 end
 
 #16.
+def sell_pet_to_customer(pet_shop_hash, pet, customer)
+  if customer_can_afford_pet(customer, pet) == true #if customer can afford pet_type
+    add_pet_to_customer(customer, pet)  #add pet to customer
+    pet_shop_hash[:admin][:pets_sold] += customer_pet_count(customer) #increase_pets_sold(pet_shop_hash, pet_shop_hash) #Add pet to pets_Sold
+    remove_customer_cash(customer, pet[:price]) #deduct money from customer
+    add_or_remove_cash(pet_shop_hash, pet[:price])   #add money to shop
+  else
+    return false
+  end
+end
