@@ -46,7 +46,7 @@ def find_pet_by_name(pet_shop_hash, pet_name)
       return pet
     end
   end
-return nil
+  return nil
 end
 
 #9.
@@ -105,12 +105,15 @@ end
 
 #16.
 def sell_pet_to_customer(pet_shop_hash, pet, customer)
-  if customer_can_afford_pet(customer, pet) == true #if customer can afford pet_type
-    add_pet_to_customer(customer, pet)  #add pet to customer
-    pet_shop_hash[:admin][:pets_sold] += customer_pet_count(customer) #increase_pets_sold(pet_shop_hash, pet_shop_hash) #Add pet to pets_Sold
-    remove_customer_cash(customer, pet[:price]) #deduct money from customer
-    add_or_remove_cash(pet_shop_hash, pet[:price])   #add money to shop
+  if pet != nil && customer_can_afford_pet(customer, pet) == true
+    add_pet_to_customer(customer, pet)
+    pet_shop_hash[:admin][:pets_sold] += customer_pet_count(customer)
+     remove_customer_cash(customer, pet[:price])
+    add_or_remove_cash(pet_shop_hash, pet[:price])
   else
-    return false
+      customer_pet_count(customer)
+      pet_shop_hash[:admin][:pets_sold]
+      customer_cash(customer)
+      total_cash(pet_shop_hash)
   end
 end
